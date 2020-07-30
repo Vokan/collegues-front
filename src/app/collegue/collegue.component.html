@@ -4,16 +4,22 @@
 <div class="container">
   <div class="row">
     <div class ="col-12 col-md-4">
-      <img src="{{col.photoUrl}}" class ="img-fluid rounded" alt="Fritz">
+      <img src="{{col['photoUrl']}}" class ="img-fluid rounded" alt="Fitz">
     </div>
     <div class = "col-12 col-md-8">
       <div class="row">
-        <p>Matricul :{{col.matricule}}<br/>
-        nom :{{col.nom}}<br/>
-        prenom :{{col.prenom}}<br/>
-        email :{{col.email}}<br/>
-        dateDeNaissance :{{col.dateDeNaissance}}<br/>
+        <p>Matricul : {{col.matricule}}<br/>
+        Nom : {{col.nom}}<br/>
+        Prenom : {{col.prenom}}<br/>
+        Email : {{col.email}}<br/>
+        DateDeNaissance : {{col.dateDeNaissance}}<br/>
         </p>
+      </div>
+
+      <div class ="row">
+        <div class ="col-12 col-md-4">
+        <button (clik)="nouveauCollegue()">Créer un nouveau collègue</button>
+        </div>
       </div>
     </div>
   </div>
