@@ -3,7 +3,7 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class ="col-12 col-md-4">
+    <div class ="col-md-4 "style="text-align: center" >
       <img src="{{col['photoUrl']}}" class ="img-fluid rounded" alt="Fitz">
     </div>
     <div class = "col-12 col-md-8">
@@ -15,7 +15,7 @@
         DateDeNaissance : {{col.dateDeNaissance}}<br/>
         </p>
         <div class ="col-12 col-md-5">
-          <button (clik)="nouveauCollegue()">Créer un nouveau collègue</button>
+          <a href= "#" (click)="nouveauCollegue()">Créer un nouveau collègue</a>
         </div>
         <div class ="col-12 col-md-3">
           <button (clik)="modifier()">Modifier</button>
