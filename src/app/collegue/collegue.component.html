@@ -3,10 +3,12 @@
 </div>
 <div class="container">
   <div class="row">
-    <div class ="col-md-8 "style="text-align: center" >
+    <!--Colone de gauche-->
+    <div class ="col-sx-12 col-sm-12 col-md-8 "style="text-align: center" >
       <img src="{{col['photoUrl']}}" style="max-width:150px;" class ="img-fluid rounded" alt="Fitz">
     </div>
-    <div class = "col">
+    <!--colone de droite-->
+    <div class = "col-sx-12 col-sm-12 col-md-4">
       <div class="row">
         <p>Matricul : {{col.matricule}}<br/>
         Nom : {{col.nom}}<br/>
@@ -14,11 +16,11 @@
         Email : {{col.email}}<br/>
         DateDeNaissance : {{col.dateDeNaissance}}<br/>
         </p>
-        <div class="row">
+      </div>
+      <div class="row">
         <a href= "#" (click)="nouveauCollegue()">Créer un nouveau collègue</a>
         <button style="text-align: right;" (clik)="modifier()">Modifier</button>
         </div>
-      </div>
     </div>
   </div>
 </div>
