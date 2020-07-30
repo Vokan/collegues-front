@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <!--Colone de gauche-->
-    <div class ="col-sx-12 col-sm-12 col-md-8 "style="text-align: center" >
+    <div class ="col-sx-12 col-sm-12 col-md-4 "style="text-align: center" >
       <img src="{{col['photoUrl']}}" style="max-width:150px;" class ="img-fluid rounded" alt="Fitz">
     </div>
     <!--colone de droite-->
@@ -17,10 +17,12 @@
         DateDeNaissance : {{col.dateDeNaissance}}<br/>
         </p>
       </div>
+
       <div class="row">
         <a href= "#" (click)="nouveauCollegue()">Créer un nouveau collègue</a>
         <button style="text-align: right;" (clik)="modifier()">Modifier</button>
         </div>
+
     </div>
   </div>
 </div>
