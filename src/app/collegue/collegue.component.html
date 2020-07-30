@@ -10,12 +10,23 @@
     <!--colone de droite-->
     <div class = "col-sx-12 col-sm-12 col-md-8">
       <div class="row">
-        <p>Matricul : {{col.matricule}}<br/>
-        Nom : {{col.nom}}<br/>
-        Prenom : {{col.prenom}}<br/>
-        Email : {{col.email}}<br/>
-        DateDeNaissance : {{col.dateDeNaissance}}<br/>
+        <div class ="col-md-6">
+        <p>Matricul : <br/>
+        Nom : <br/>
+        Prenom : <br/>
+        Email : <br/>
+        DateDeNaissance : <br/>
         </p>
+      </div>
+
+      <div class ="col-md-6">
+        <p>
+          {{col.matricule}}<br/>
+          {{col.nom}}<br/>
+          {{col.email}}<br/>
+          {{col.dateDeNaissance}}<br/>
+        </p>
+      </div>
       </div>
 
       <div class="row">
@@ -23,9 +34,10 @@
           <a href= "#" (click)="nouveauCollegue()">Créer un nouveau collègue</a>
         </div>
 
-        <div class="col">
-          <button style="text-align: left;" (clik)="modifier()">Modifier</button>
+        <div class="col" style="text-align:right;">
+          <button  (clik)="modifier()">Modifier</button>
         </div>
+
       </div>
     </div>
 
