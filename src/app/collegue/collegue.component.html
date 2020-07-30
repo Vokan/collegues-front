@@ -14,8 +14,10 @@
         <p>Matricul : <br/>
         Nom : <br/>
         Prenom : <br/>
-        Email : <br/>
         DateDeNaissance : <br/>
+        Email : <br/>
+        Photo URL : <br/>
+
         </p>
       </div>
 
@@ -24,8 +26,9 @@
           {{col.matricule}}<br/>
           {{col.nom}}<br/>
           {{col.prenom}}<br/>
-          {{col.email}}<br/>
           {{col.dateDeNaissance}}<br/>
+          {{col.email}}<br/>
+          {{col.photoUrl}}<br/>
         </p>
       </div>
       </div>
@@ -36,7 +39,7 @@
         </div>
 
         <div class="col" style="text-align:left;">
-          <button  (clik)="modifier()">Modifier</button>
+          <button type="button" class="btn btn-primary" (clik)="modifier()">Modifier</button>
         </div>
 
       </div>
