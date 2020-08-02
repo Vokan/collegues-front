@@ -48,12 +48,13 @@
       </div>
       <div class="row">
         <div class="col">
-          <a href= "#" (click)="nouveauCollegue()">Créer un nouveau collègue</a>
+          <a href= "#" (click)="nouveauCollegue()" [hidden]="!elementMasquee">Créer un nouveau collègue</a>
         </div>
 
         <!-- les bouttons-->
         <div class="col" style="text-align:left;">
-          <button type="button" class="btn btn-primary" (clik)="modifier()">Modifier</button>
+          <button type="button" class="btn btn-outline-secondary float-right" (click)="modifier()" [hidden]="!elementMasquee">Modifier</button>
+      <button type="button" class="btn btn-outline-secondary float-right" (click)="valider()" [hidden]="elementMasquee">Valider</button>
         </div>
 
       </div>
