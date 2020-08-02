@@ -31,12 +31,13 @@
           {{col.photoUrl}}<br/>
         </p>
 
+        <div class="from-group" [hidden]="elementMasquee">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email-" placeholder="@adress.com">
+         </div>
+
       </div>
        <!-- l'input de l'email-->
-       <div class="from-group" *ngIf="elementMasquee">
-       <label for="email">Email</label>
-       <input type="email" class="form-control" id="email-" placeholder="@adress.com">
-      </div>
 
       <!-- l'input de l'image-->
 
