@@ -30,24 +30,17 @@
           {{col.email}}<br/>
           {{col.photoUrl}}<br/>
         </p>
+
       </div>
        <!-- l'input de l'email-->
-       <div class="from-group" [hidden]="elementMasquee"></div>
+       <div class="from-group" *ngIf="elementMasquee">
        <label for="email">Email</label>
        <input type="email" class="form-control" id="email-" placeholder="@adress.com">
       </div>
 
       <!-- l'input de l'image-->
-      <div class="input-group mb-3" [hidden]="elementMasquee">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="urlphoto">URL photo</span>
-        </div>
-        <input type="text" class="form-control" aria-label="urlphoto" aria-describedby="urlphoto">
-      </div>
 
       </div>
-
-
       <div class="row">
         <div class="col">
           <a href= "#" (click)="nouveauCollegue()">Créer un nouveau collègue</a>
@@ -55,8 +48,7 @@
 
         <!-- les bouttons-->
         <div class="col" style="text-align:left;">
-          <button type="button" class="btn btn-primary" (clik)="modifier()"  [hidden]="!elementMasquee">Modifier</button>
-          <button type="button" class="btn btn-outline-secondary float-right" (click)="valider()" [hidden]="elementMasquee">Valider</button>
+          <button type="button" class="btn btn-primary" (clik)="modifier()">Modifier</button>
         </div>
 
       </div>

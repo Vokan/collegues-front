@@ -20,13 +20,13 @@ export class CollegueComponent implements OnInit {
   modifier(): void{
     console.log('Modification du collegue');
     this.elementMasquee = !this.elementMasquee;
-}
-valider(): void{
-  console.log('Validation des modifications');
-  this.elementMasquee = !this.elementMasquee;
-}
+  }
+  valider(): void{
+    console.log('Validation des modifications');
+    this.elementMasquee = !this.elementMasquee;
+  }
 
-nouveauCollegue(): void {
-  console.log('Création d\'un nouveau collègue');
-}
+  nouveauCollegue(): void {
+    console.log('Création d\'un nouveau collègue');
+  }
 }
