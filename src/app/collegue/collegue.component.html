@@ -32,7 +32,7 @@
         </p>
       </div>
        <!-- l'input de l'email-->
-       <div class="from-group" *ngIf="apresModif"></div>
+       <div class="from-group" [hidden]="elementMasquee"></div>
        <label for="email">Email</label>
        <input type="email" class="form-control" id="email-" placeholder="@adress.com">
       </div>

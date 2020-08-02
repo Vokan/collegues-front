@@ -10,8 +10,7 @@ export class CollegueComponent implements OnInit {
 
   @Input() col: Collegue;
 
-  avantModif: true;
-  apresModif: false;
+  elementMasquee = true;
 
   constructor() { }
 
@@ -19,12 +18,12 @@ export class CollegueComponent implements OnInit {
   }
 
   modifier(): void{
-    this.avantModif = true;
-    this.apresModif = false;
-    console.log('Modification du collègue');
+    console.log('Modification du collegue');
+    this.elementMasquee = !this.elementMasquee;
 }
 valider(): void{
-  this.apresModif = false;
+  console.log('Validation des modifications');
+  this.elementMasquee = !this.elementMasquee;
 }
 
 nouveauCollegue(): void {
