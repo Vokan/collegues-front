@@ -9,18 +9,24 @@ import { Collegue } from '../models/Collegue';
 export class CollegueComponent implements OnInit {
 
   @Input() col: Collegue;
-  modif: false;
-  sansModif: null;
+
+  avantModif: true;
+  apresModif: false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
   modifier(): void{
-    this.modif = false;
-    this.sansModif = null;
+    this.avantModif = true;
+    this.apresModif = false;
     console.log('Modification du collègue');
 }
+valider(): void{
+  this.apresModif = false;
+}
+
 nouveauCollegue(): void {
   console.log('Création d\'un nouveau collègue');
 }
