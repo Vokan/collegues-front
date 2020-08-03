@@ -30,18 +30,18 @@
         </p>
 
         <div *ngIf="!modif">
-          <p>
+
             {{col.email}}
-          </p>
+
         </div>
         <div *ngIf="modif">
           <input type="email" class="form-control" id="email-" placeholder="@adress.com">
         </div>
 
         <div *ngIf="!modif">
-
+          <p>
             {{col.photoUrl}}
-
+          </p>
         </div>
         <div *ngIf="modif">
           <div class="input-group mb-3">
