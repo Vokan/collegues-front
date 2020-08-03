@@ -10,7 +10,7 @@ export class CollegueComponent implements OnInit {
 
   @Input() col: Collegue;
 
-  elementMasquee = true;
+  modif = false;
 
   constructor() { }
 
@@ -19,11 +19,11 @@ export class CollegueComponent implements OnInit {
 
   modifier(): void{
     console.log('Modification du collegue');
-    this.elementMasquee = !this.elementMasquee;
+    this.modif = true;
   }
   valider(): void{
     console.log('Validation des modifications');
-    this.elementMasquee = !this.elementMasquee;
+    this.modif = false;
   }
 
   nouveauCollegue(): void {

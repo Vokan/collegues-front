@@ -17,8 +17,8 @@
         DateDeNaissance : <br/>
         Email : <br/>
         Photo URL : <br/>
-
         </p>
+
       </div>
 
       <div class ="col-md-6">
@@ -27,34 +27,44 @@
           {{col.nom}}<br/>
           {{col.prenom}}<br/>
           {{col.dateDeNaissance}}<br/>
-          {{col.email}}<br/>
-          {{col.photoUrl}}<br/>
         </p>
 
-        <div class="from-group" [hidden]="elementMasquee">
-          <label for="email">Email</label>
+        <div *ngIf="!modif">
+          <p>
+            {{col.email}}<br/>
+          </p>
+        </div>
+        <div *ngIf="modif">
           <input type="email" class="form-control" id="email-" placeholder="@adress.com">
-         </div>
+        </div>
 
-         <div class="input-group mb-3" [hidden]="elementMasquee">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="urlphoto">URL photo</span>
+        <div *ngIf="!modif">
+          <p>
+            {{col.photoUrl}}<br/>
+          </p>
+        </div>
+
+        <div *ngIf="modif">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="urlphoto">URL photo</span>
+            </div>
+            <input type="text" class="form-control" aria-label="urlphoto" aria-describedby="urlphoto">
           </div>
-          <input type="text" class="form-control" aria-label="urlphoto" aria-describedby="urlphoto">
         </div>
 
       </div>
 
       </div>
       <div class="row">
-        <div class="col">
-          <a href= "#" (click)="nouveauCollegue()" [hidden]="!elementMasquee">Créer un nouveau collègue</a>
+        <div class="col" *ngIf="!modif">
+          <a href= "#" (click)="nouveauCollegue()" >Créer un nouveau collègue</a>
         </div>
 
         <!-- les bouttons-->
         <div class="col" style="text-align:left;">
-          <button type="button" class="btn btn-outline-secondary float-right" (click)="modifier()" [hidden]="!elementMasquee">Modifier</button>
-      <button type="button" class="btn btn-outline-secondary float-right" (click)="valider()" [hidden]="elementMasquee">Valider</button>
+          <button type="button" class="btn btn-outline-secondary float-right" (click)="modifier()" *ngIf="!modif">Modifier</button>
+      <button type="button" class="btn btn-outline-secondary float-right" (click)="valider()" *ngIf="modif">Valider</button>
         </div>
 
       </div>
