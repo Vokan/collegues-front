@@ -9,6 +9,7 @@ export class RechercheCollegueParNomComponent implements OnInit {
 
   rechercher = false;
   matriculesMock;
+
   constructor() { }
 
   ngOnInit(): void {
