@@ -9,4 +9,5 @@ import { collegueMock } from './mock/collegues.mock';
 export class AppComponent {
   title = 'collegues-front';
   collegueMock = collegueMock;
+
 }
