@@ -5,4 +5,9 @@
   <input type="text" aria-label="Recherche par nom" class="form-control">
 </div>
 
+<div *ngIf="recherche">
+  <ul>
+    <li *ngFor="let matricule of matriculesMock">{{matricule}}</li>
+  </ul>
+</div>
 

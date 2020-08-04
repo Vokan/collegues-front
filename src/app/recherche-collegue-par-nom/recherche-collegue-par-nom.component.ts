@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RechercheCollegueParNomComponent implements OnInit {
 
   rechercher = false;
-
+  matriculesMock;
   constructor() { }
 
   ngOnInit(): void {
