@@ -15,13 +15,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class DataService {
 
   collegues: Collegue[] = collegueMock();
-  subjectColSelectionne = new Subject<Collegue>();
-
-   httpOptions = {
-    headers: new HttpHeaders({
-    "Content-Type": "application/json"
-    })
-    };
 
   constructor(private http: HttpClient) { }
 
@@ -36,7 +29,5 @@ export class DataService {
     return this.collegues[0];
   }
 
-  creerNouveauCollegue(newCollegue: NewCollegue): Observable<NewCollegue> {
-    return this.http.post<NewCollegue>(`https://robin-collegue-app.herokuapp.com/collegues`, newCollegue, this.httpOptions);
-  }
+
 }
