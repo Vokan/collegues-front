@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import { Collegue } from '../models/Collegue';
 import {matriculesMock} from '../mock/matricules.mock';
 import {collegueMock} from '../mock/collegues.mock';
-import { NewCollegue} from '../models/NewCollegue';
-import { Observable, from, interval, Subject } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 
@@ -14,19 +11,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DataService {
 
-  collegues: Collegue[] = collegueMock();
+  matriculesMock = matriculesMock;
+  collegueMock = collegueMock;
 
-  constructor(private http: HttpClient) { }
 
   rechercheParNom(nom: string): string[]{
     // TODO retourner une liste de matricules fictifs à partir du fichier
 
-    return  matriculesMock.map(m => m.matricule);
+    return this.matriculesMock;
   }
 
   recupererCollegueCourant(): Collegue {
     // TODO retourner le collègue fictif à partir du fichier `src/app/mock/collegues.mock.ts`.
-    return this.collegues[0];
+    return collegueMock;
   }
 
 

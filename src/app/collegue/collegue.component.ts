@@ -9,16 +9,14 @@ import {DataService} from '../services/data.service';
 })
 export class CollegueComponent implements OnInit {
 
-  @Input()
 
-  col;
+  col: Collegue = this.dataService.recupererCollegueCourant();
 
   modif = false;
 
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.recupererCollegueCourant();
   }
 
   modifier(): void{

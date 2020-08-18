@@ -7,7 +7,9 @@ export class  Collegue  {
   dateDeNaissance: Date;
   photoUrl: string;
 
-  constructor(matricule, nom, prenom, email, dateDeNaissance, photoUrl) {
+  constructor(){}
+
+  /*constructor(matricule, nom, prenom, email, dateDeNaissance, photoUrl) {
     this.matricule = matricule;
     this.nom = nom;
     this.prenom = prenom;
@@ -15,4 +17,5 @@ export class  Collegue  {
     this.dateDeNaissance = dateDeNaissance;
     this.photoUrl = photoUrl;
   }
+  */
 }

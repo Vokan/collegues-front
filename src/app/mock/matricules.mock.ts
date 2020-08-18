@@ -1,10 +1,10 @@
 export const matriculesMock = [
-  {matricule: 'NEO405'},
-  {matricule: 'NEO406'},
-  {matricule: 'NEO407'},
-  {matricule: 'NEO408'},
-  {matricule: 'NEO409'},
-  {matricule: 'NEO410'},
-  {matricule: 'NEO411'},
-  {matricule: 'NEO412'}
+  'NEO405',
+  'NEO406',
+  'NEO407',
+  'NEO408',
+  'NEO409',
+  'NEO410',
+  'NEO411',
+  'NEO412'
 ];

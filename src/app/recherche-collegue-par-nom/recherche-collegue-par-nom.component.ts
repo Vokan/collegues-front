@@ -1,5 +1,4 @@
-import { matriculesMock } from './../mock/matricules.mock';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { DataService} from '../services/data.service';
 
 @Component({
@@ -9,19 +8,13 @@ import { DataService} from '../services/data.service';
 })
 export class RechercheCollegueParNomComponent implements OnInit {
 
-   // avant utilisation de DataService
-  // matriculesMock = matriculesMock;
+  matriculesMock = this.dataService.rechercheParNom('nom');
 
   rechercher = false;
 
-  // Apres utilisation de DataService
-  matriculesMock;
-
   constructor( private dataService: DataService ) { }
 
-  ngOnInit(): void {
-    this.matriculesMock = this.dataService.rechercheParNom('NEO405');
-  }
+  ngOnInit(): void { }
 
   recherche(): void {
     this.rechercher = true;
